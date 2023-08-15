@@ -1,1 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300&display=swap');
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: antiquewhite;
+}
+
+.search-bar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar img {
+    padding: 10px;
+}
+
+.categories{
+    padding: 10px;
+}
+
+.cart{
+    padding: 10px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;  
+    background-color: azure;
+}
+
+.product{
+    width: 100px;
+    padding: 50px;
+}
+
+.product img{
+    width: 100%;
+}
