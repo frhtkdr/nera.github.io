@@ -5,90 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>New Web</title>
+    <title>Nera | The New Era</title>
 
 </head>
 <body>
 
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+
     <header>
         
         <div class="categories">
-            <span class="material-icons-sharp">
-                filter_list
-            </span>
+            <lord-icon
+                src="https://cdn.lordicon.com/zchxlapl.json"
+                trigger="hover"
+                colors="primary:#121331"
+                style="width:30px;height:30px">
+            </lord-icon>
         </div>
 
         <div class="search-bar">
-            <img src="./img/logo.png" alt="Logo" width="30" height="30">
-            <input type="text" placeholder="Looking for...">
+            <img src="./img/logo.svg" alt="Logo" width="30" height="30">
+            <input type="text" class="input" placeholder="Looking for...">
             <button>Search</button>
         </div>
 
         <div class="cart">
-            <span class="material-icons-sharp">
-                shopping_cart
-            </span>
+            <lord-icon
+                src="https://cdn.lordicon.com/udbbfuld.json"
+                trigger="hover"
+                colors="primary:#121331"
+                style="width:30px;height:30px">
+            </lord-icon>
         </div>
 
     </header>
     <div class="container">
         <aside>
             <div class="sidebar-left">
-                <h2>Categories</h2>
                 <ul>
-                  <li><a href="#">Tech</a></li>
-                  <li><a href="#">Books</a></li>
-                  <li><a href="#">Clothes</a></li>
-                  <li><a href="#">Cosmetics</a></li>
-                </ul>
+                    <li>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/pndvzexs.json"
+                            trigger="hover"
+                            colors="primary:#121331,secondary:#08a88a"
+                            style="width:40px;height:40px">
+                        </lord-icon>
+                        <a href="#">Electronics</a>
+                    </li>
+                    <li>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/wxnxiano.json"
+                            trigger="morph"
+                            colors="primary:#08a88a,secondary:#121331"
+                            state="morph"
+                            style="width:40px;height:40px">
+                        </lord-icon>
+                        <a href="#">Books</a>
+                    </li>
+                    <li>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/rjzlnunf.json"
+                            trigger="hover"
+                            colors="primary:#121331,secondary:#08a88a"
+                            state="hover-2"
+                            style="width:40px;height:40px">
+                        </lord-icon>
+                        <a href="#">Gym</a>
+                    </li>
             </div>
         </aside>
 
         <main>
 
-            <div class="product">
-              <img src="img/logo.png" alt="Burger">
-              <h3>Burger</h3>
-              <p>Delicious burger with all the fixings.</p>
-              <span>$10.99</span>
-              <button>Add to Cart</button>
-            </div>
+            <div class="card"><img src="img/logo.png">NERA</div>  
 
-            <div class="product">
-              <img src="img/logo.png" alt="Pizza">
-              <h3>Pizza</h3>
-              <p>Hot and cheesy pizza with your favorite toppings.</p>
-              <span>$12.99</span>
-              <button>Add to Cart</button>
-            </div>
+            <div class="card"><img src="img/logo.png">NERA</div>
 
-            <div class="product">
-                <img src="img/logo.png" alt="Burger">
-                <h3>Burger</h3>
-                <p>Delicious burger with all the fixings.</p>
-                <span>$10.99</span>
-                <button>Add to Cart</button>
-              </div>
+            <div class="card"><img src="img/logo.png">NERA</div>
   
-              <div class="product">
-                <img src="img/logo.png" alt="Pizza">
-                <h3>Pizza</h3>
-                <p>Hot and cheesy pizza with your favorite toppings.</p>
-                <span>$12.99</span>
-                <button>Add to Cart</button>
-          
-        
+            <div class="card"><img src="img/logo.png">NERA</div>
+
+            <div class="card"><img src="img/logo.png">NERA</div>  
+
+            <div class="card"><img src="img/logo.png">NERA</div>
+
+            <div class="card"><img src="img/logo.png">NERA</div>
+  
+            <div class="card"><img src="img/logo.png">NERA</div>
+
+            <div class="card"><img src="img/logo.png">NERA</div>  
+
+            <div class="card"><img src="img/logo.png">NERA</div>
+
+            <div class="card"><img src="img/logo.png">NERA</div>
+  
+            <div class="card"><img src="img/logo.png">NERA</div>
+
+            <div class="card"><img src="img/logo.png">NERA</div>  
+
+            <div class="card"><img src="img/logo.png">NERA</div>
+
+            <div class="card"><img src="img/logo.png">NERA</div>
+  
+            <div class="card"><img src="img/logo.png">NERA</div>
+
         </main>
 
         <aside>
             <div class="sidebar-right">
-                <h2>Shopping Cart</h2>
                 <ul class="cart-items">
                   <!-- Cart items will be dynamically added here using JavaScript -->
                 </ul>
-                <p>Total: $<span id="total-price">0.00</span></p>
-                <button id="checkout-btn">Checkout</button>
-            
+
+                <div class="checkout">
+                    <p>Total: $<span id="total-price">0.00</span></p>
+                    <button id="checkout-btn">Checkout</button>
+                </div>
             </div>
         </aside>
     
