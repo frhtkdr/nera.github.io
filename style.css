@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300&display=swap');
 
-header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: #be1e2d;
-}
 
 body{
     font-family: 'Poppins';
@@ -41,24 +35,6 @@ main{
     width: 100%;
     display: flex;
     flex-flow: row wrap;
-    column-gap: 30px;
-}
-
-.sidebar-left ul{
-    padding: 0;
-}
-
-.sidebar-left ul li{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px;
-}
-
-.sidebar-left ul li img{
-    width: 30px;
-    height: 25px;
-    padding: 10px;
 }
 
 .cart-items{
@@ -69,18 +45,20 @@ main{
     padding: 10px;
 }
 
+/*_________________________card_____________________________________________*/
+
 .card{
     box-sizing: border-box;
     width: 190px;
     height: 254px;
+    margin: 20px;
     background: rgba(217, 217, 217, 0.58);
     border: 1px solid white;
-    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
     backdrop-filter: blur(6px);
     border-radius: 17px;
     text-align: center;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.2s;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -91,7 +69,7 @@ main{
   }
   
   .card:hover {
-    border: 1px solid black;
+    border: 2px solid #08a88a;
     transform: scale(1.05);
   }
   
@@ -104,25 +82,223 @@ main{
     padding: 10%;
   }
 
+/*_________________________card_____________________________________________*/
+
+
+
+
+
+
+
+
+
+  /* Apply styles to the entire aside element */
+aside {
+  background-color: #f7f7f7;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc   ;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Apply styles to the sidebar container */
+.sidebar-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-left ul{
+    padding: 0;
+}
+
+/* Apply styles to the individual list items */
+.sidebar-left li {
+  list-style: none;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Apply styles to the animated icons */
+.sidebar-left lord-icon {
+  margin-right: 10px;
+}
+
+/* Apply styles to the links */
+.sidebar-left a {
+  text-decoration: none;
+  color: #121331;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.sidebar-left li:hover lord-icon {
+    transform: scale(1.2); /* Apply the scale transform on hover */
+  }
+  
+  .sidebar-left a:hover {
+    color: #08a88a;
+  }
+  
+
+
+
+
+
+
+  
+
+  .cart-items {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    overflow-y: auto; /* Add scroll for cart items */
+  }
+  
+  /* Apply styles to each cart item */
+  .cart-items li {
+    margin-bottom: 10px;
+  }
+  
+  /* Apply styles to the shaded area */
+  .cart-shade {
+    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent shade */
+    flex-grow: 1; /* Allow it to expand to fill available space */
+  }
+  
+  /* Apply styles to the checkout section */
+  .checkout {
+    text-align: left; /* Align text to the left */
+    margin: 20px;
+    position: fixed; /* Stick to the viewport */
+    bottom: 0; /* Stick to the bottom */
+    right: 0; /* Stick to the right */
+    width: 150px; /* Set a fixed width */
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align content to the right */
+    padding: 10px 20px;
+    box-sizing: border-box;
+  }
+    
+  /* Apply styles to the total price */
+  #total-price {
+    font-weight: bold;
+  }
+  
+  /* Apply styles to the checkout button */
+  #checkout-btn {
+    background-color: #08a88a;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Apply styles to the checkout button on hover */
+  #checkout-btn:hover {
+    background-color: #067d68;
+  }
+  
+
+
+
+
+
+
+
+
+
+  .cart-placeholder {
+    list-style: none;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .placeholder-box {
+    width: 100%;
+    height: 40px; /* Set the height of the placeholder box */
+    background-color: #ddd;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Apply styles to the header */
+header {
+    background-color: #f7f7f7;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Apply styles to the categories icon */
+  .categories lord-icon {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .categories lord-icon:hover {
+    transform: scale(1.2);
+  }
+  
+  
+  .search-bar img {
+    margin-right: 10px;
+  }
+  
   .input {
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
-    font-weight: 500;
-    font-size: .8vw;
-    color: #fff;
-    background-color: rgb(28,28,30);
-    box-shadow: 0 0 .4vw rgba(0,0,0,0.5), 0 0 0 .15vw transparent;
-    border-radius: 0.4vw;
     border: none;
     outline: none;
-    padding: 0.4vw;
-    max-width: 190px;
-    transition: .4s;
+    font-size: 14px;
+    padding: 5px 10px;
   }
   
-  .input:hover {
-    box-shadow: 0 0 0 .15vw rgba(135, 207, 235, 0.186);
+  button {
+    background-color: #08a88a;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
   
-  .input:focus {
-    box-shadow: 0 0 0 .15vw skyblue;
+  button:hover {
+    background-color: #067d68;
   }
+  
+  /* Apply styles to the cart icon */
+  .cart lord-icon {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .cart lord-icon:hover {
+    transform: scale(1.2);
+  }
+  
+
+
+
+
