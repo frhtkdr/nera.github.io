@@ -54,10 +54,8 @@ main{
     margin: 20px;
     background: rgba(217, 217, 217, 0.58);
     border: 1px solid white;
-    backdrop-filter: blur(6px);
     border-radius: 17px;
     text-align: center;
-    cursor: pointer;
     transition: all 0.2s;
     display: flex;
     flex-direction: column;
@@ -246,17 +244,6 @@ header {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   }
   
-  /* Apply styles to the categories icon */
-  .categories lord-icon {
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .categories lord-icon:hover {
-    transform: scale(1.2);
-  }
-  
-  
   .search-bar img {
     margin-right: 10px;
   }
@@ -282,15 +269,6 @@ header {
     background-color: #067d68;
   }
   
-  /* Apply styles to the cart icon */
-  .cart lord-icon {
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .cart lord-icon:hover {
-    transform: scale(1.2);
-  }
   
 
 
@@ -410,7 +388,7 @@ header {
     border: 2px solid transparent;
     border-radius: 8px;
     outline: none;
-    background-color: #f3f3f4;
+    background-color: #fff;
     color: #0d0c22;
     transition: .3s ease;
    }
@@ -422,7 +400,6 @@ header {
    .input:focus, input:hover {
     outline: none;
     border-color: #08a88a;
-    background-color: #fff;
     box-shadow: 0 0 0 4px rgb(8, 168, 138, 10%) ;
    }
    
