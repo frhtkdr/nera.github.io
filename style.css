@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300&display=swap');
 
 
-body{
-    font-family: 'Poppins';
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
 }
 
 
@@ -15,17 +17,9 @@ body{
 }
 
 .search-bar img {
-    padding: 10px;
+    padding: 5px;
 }
 
-.categories{
-    padding: 10px;
-    transform: rotate(90deg);
-}
-
-.cart{
-    padding: 10px;
-}
 
 .container{
     display: flex;
@@ -34,25 +28,31 @@ body{
 
 main{
     width: 100%;
-    max-width: 922px;
-    display: flex;
-    flex-flow: row wrap;
     justify-content: center;
 }
 
+.navbarIcon svg{
+  height: 20px;
+  margin: 5px;
+}
 
-
-.subCategories{
+.subCategoriesContainer{
+  width: 100%;
+  z-index: 100;
   position: sticky;
   top: 0;
+}
+
+.subCategories{
   width: 100%;
+  position: absolute;
+  background-color: white;
+  border-bottom: 2px solid black;
   display: flex;
   flex-direction: row;
-  align-items: center;
   overflow: auto;
-  background-color: white;
   z-index: 100;
-  border-bottom: 2px solid black;
+
 }
 
 .subCategories::-webkit-scrollbar {
@@ -61,11 +61,20 @@ main{
 
 
 .subCategoriesBtn{
-  width: 110px;
-  height: 40px;
+  color: white;
   margin: 10px;
+  padding: 5px;
   background-color: black;
+  border-radius: 9px;
 }
+
+.cardsContainer{
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
 
 
 /*_________________________card_____________________________________________*/
@@ -122,54 +131,76 @@ aside {
   display: flex;
   flex-direction: column;
 }
-
-.sidebar-left ul{
-    padding: 0;
-}
-
-/* Apply styles to the individual list items */
-.sidebar-left li {
-  list-style: none;
-  margin: 20px;
-  display: flex;
-  align-items: center;
-}
-
-/* Apply styles to the animated icons */
-.sidebar-left lord-icon {
-  margin-right: 10px;
-}
-
-/* Apply styles to the links */
-.sidebar-left a {
-  text-decoration: none;
-  color: #121331;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.sidebar-left li:hover lord-icon {
-    transform: scale(1.2); /* Apply the scale transform on hover */
-  }
-  
   .sidebar-left a:hover {
     color: #08a88a;
   }
   
 
 
-  
-
-
-
-
-
-
-.checkout{
+  .dropdown{
+    display: none;
     padding: 10px;
+  }
+
+  .dropdown a{
+    display: block;
+    padding: 5px;
+  }
+
+  .mainCategories{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mainCategoriesBtn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: Poppins;
+    padding: 10px;
+  }
+
+.mainCategoriesBtn svg{
+    fill: #08a88a;  
+    padding: 5px;
 }
+
+.mainCategoriesBtn b{
+  font-weight: bold;
+  padding: 5px;
+}
+
+  .mainCategories:hover .dropdown{
+    display: block;
+  }
+  @keyframes flickerAnimation { /* flame pulses */
+    0%   { opacity:1; }
+    50%  { opacity:0.5; }
+    100% { opacity:1; }
+  }  
+
+  .mainCategoriesBtn:hover svg{
+    opacity:1;  
+    animation: flickerAnimation 2s infinite;
+  }
+
+
+
   
 
+
+
+
+
+
+
+
+
+  .sidebar-right{
+    position: sticky;
+    right: 0;
+    z-index: 101;
+  }
   
 
   .cart-items {
@@ -189,6 +220,7 @@ aside {
   /* Apply styles to the checkout section */
   .checkout {
     width: auto;
+    padding: 10px;
     position: sticky;
     bottom: 0; /* Stick to the bottom */
     border-top: 2px solid black;
@@ -203,23 +235,51 @@ aside {
     font-weight: bold;
   }
   
-  /* Apply styles to the checkout button */
-  #checkout-btn {
-    background-color: #08a88a;
+
+  
+  .checkoutBtn {
+    background: #A370F0;
     color: white;
+    width: 100%;
+    height: 40px;
+    padding:10px;
+    border-radius: 9px;
     border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .checkoutBtn .icon {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    border-radius: 9px;
+    transition: all 0.3s;
+  }
+  
+  .checkoutBtn:hover .icon {
+    width: calc(100% - 10px);
+  }
+  
+  .checkoutBtn .icon svg {
     width: 70%;
-    padding: 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s;
+    color: #7b52b9;
   }
   
-  /* Apply styles to the checkout button on hover */
-  #checkout-btn:hover {
-    background-color: #067d68;
+  
+  .checkoutBtn:active .icon {
+    transform: scale(0.95);
   }
   
+
+
+
 
 
 
@@ -274,20 +334,6 @@ header {
     outline: none;
     font-size: 14px;
     padding: 5px 10px;
-  }
-  
-  button {
-    background-color: #08a88a;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #067d68;
   }
   
   
@@ -413,19 +459,19 @@ header {
     transition: .3s ease;
    }
    
-   .input::placeholder {
+   .SearchIcon::placeholder {
     color: #9e9ea7;
    }
    
-   .input:focus, input:hover {
+   .SearchIcon:focus, input:hover {
     outline: none;
     border-color: #08a88a;
     box-shadow: 0 0 0 4px rgb(8, 168, 138, 10%) ;
    }
    
-   .icon {
+   .SearchIcon {
     position: absolute;
-    left: 1rem;
+    left: 10px;
     fill: #9e9ea7;
     width: 1rem;
     height: 1rem;
@@ -474,11 +520,40 @@ header {
 }
 
 .bestDealsBox{
-  margin: 15px;
-  width: 420px;
+  position: static;
+  margin-top: 76px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
   height: 256px;
   padding: 5px;
   border-radius: 17px;
   background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 801px) {
+  .sidebar-right {
+    display: none;
+  }
+}
+
+@media (max-width: 669px) {
+  .sidebar-left {
+    display: none;
+  }
+}
