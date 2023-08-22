@@ -52,6 +52,7 @@ main{
   overflow: auto;
   background-color: white;
   z-index: 100;
+  border-bottom: 2px solid black;
 }
 
 .subCategories::-webkit-scrollbar {
