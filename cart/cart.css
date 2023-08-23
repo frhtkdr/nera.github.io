@@ -1,0 +1,98 @@
+.cart-items {
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    overflow-y: auto; /* Add scroll for cart items */
+  }
+  
+  /* Apply styles to each cart item */
+  .cart-items li {
+    margin-bottom: 10px;
+  }
+  
+  
+  /* Apply styles to the checkout section */
+  .checkout {
+    width: auto;
+    padding: 10px;
+    position: sticky;
+    bottom: 0; /* Stick to the bottom */
+    border-top: 2px solid black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+    
+  /* Apply styles to the total price */
+  #total-price {
+    font-weight: bold;
+  }
+  
+
+  
+  .checkoutBtn {
+    background: #A370F0;
+    color: white;
+    width: 100%;
+    height: 40px;
+    padding:10px;
+    border-radius: 9px;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .checkoutBtn .icon {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    border-radius: 9px;
+    transition: all 0.3s;
+  }
+  
+  .checkoutBtn:hover .icon {
+    width: calc(100% - 10px);
+  }
+  
+  .checkoutBtn .icon svg {
+    width: 70%;
+    transition: transform 0.3s;
+    color: #7b52b9;
+  }
+  
+  
+  .checkoutBtn:active .icon {
+    transform: scale(0.95);
+  }
+  
+
+
+
+
+
+
+
+
+
+
+  .cart-placeholder {
+    list-style: none;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .placeholder-box {
+    width: 100%;
+    height: 40px; /* Set the height of the placeholder box */
+    background-color: #ddd;
+  }
+  
+
