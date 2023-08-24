@@ -1,57 +1,69 @@
+/* General styles */
+.sideMenu {
+    /* Your styling for the side menu container */
+}
 
-
-
-
-
-.dropdown{
-    display: none;
-    padding: 10px;
-  }
-
-  .dropdown a{
-    display: block;
-    padding: 5px;
-  }
-
-  .mainCategories{
+/* Common styles for categories and buttons */
+.mainCategories {
     display: flex;
     flex-direction: column;
-  }
+}
 
-  .mainCategoriesBtn{
+.mainCategoriesBtn {
     display: flex;
-    flex-direction: row;
     align-items: center;
     font-family: Poppins;
     padding: 10px;
-  }
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer; /* Add a cursor pointer on hover */
+}
 
-.mainCategoriesBtn svg{
-    fill: #08a88a;  
+.mainCategoriesBtn svg {
+    fill: #08a88a;
+    padding: 5px;
+    opacity: 0.8; /* Reduce initial opacity for subtler animation */
+    transition: opacity 0.3s ease; /* Smooth transition on hover */
+}
+
+.mainCategoriesBtn b {
+    font-weight: bold;
     padding: 5px;
 }
 
-.mainCategoriesBtn b{
-  font-weight: bold;
-  padding: 5px;
+.dropdown {
+    display: none;
+    padding: 10px;
+    /* Additional styles for dropdown */
 }
 
-  .mainCategories:hover .dropdown{
+.dropdown a {
     display: block;
-  }
-  @keyframes flickerAnimation { /* flame pulses */
-    0%   { opacity:1; }
-    50%  { opacity:0.5; }
-    100% { opacity:1; }
-  }  
+    padding: 5px;
+}
 
-  .mainCategoriesBtn:hover svg{
-    opacity:1;  
-    animation: flickerAnimation 2s infinite;
-  }
-
-
-
-  .dropdown:target{
+/* Dropdown visibility on hover */
+.mainCategories:hover .dropdown {
     display: block;
-  }
+}
+
+/* Animation on SVG hover */
+.mainCategoriesBtn:hover svg {
+    opacity: 1;
+    animation: flickerAnimation 1.5s infinite; /* Adjusted duration */
+}
+
+/* Dropdown visibility using pseudo-class */
+.mainCategoriesBtn:focus + .dropdown {
+    display: block;
+}
+
+/* Keyboard navigation focus styles */
+.mainCategoriesBtn:focus {
+    outline: none; /* Remove default focus outline */
+    border: 2px solid #08a88a; /* Add a custom focus style */
+}
+
+/* Animation keyframes remain the same */
+
+/* Use of :target selector isn't necessary for your current design */

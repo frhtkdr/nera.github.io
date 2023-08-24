@@ -97,6 +97,7 @@ aside {
 
 /* Apply styles to the sidebar container */
 .sidebar-left {
+  min-width: 190px;
   display: flex;
   flex-direction: column;
 }
@@ -116,10 +117,6 @@ aside {
 
 
 
-  .sidebar-right{
-    position: sticky;
-    bottom: 0;
-  }
   
 
 
@@ -323,13 +320,16 @@ header {
 
 
 
-
-
-
-iframe.card{
-  height: 330px;
+.productCard{
   width: 230px;
+  height: 330px;
+  border: 2px solid black;
+  box-shadow: 0 0 10px 0;
 }
+
+
+
+
 
 
 
