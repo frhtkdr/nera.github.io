@@ -22,6 +22,7 @@ body{
 .card img{
     margin: 10px;
     max-height: 165px;
+    max-width: 100%;
 }
 
 .card p{
