@@ -3,10 +3,14 @@
 
 *{
   margin: 0;
-  padding: 0;
   font-family: 'Poppins';
 }
 
+body{
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+}
 
 .search-bar{
     width: 100%;
@@ -21,19 +25,25 @@
 }
 
 
-.container{
-    display: flex;
-    flex-direction: row;
-}
-
 main{
     width: 100%;
     justify-content: center;
 }
 
-.navbarIcon svg{
+.navbarBtn{
+  height: 60px;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  border-style: none;
+  background-color: #111827;
+}
+
+.navbarBtn svg{
+  fill: #f7f7f7;
   height: 20px;
-  margin: 5px;
+  margin: auto;
 }
 
 .subCategoriesContainer{
@@ -46,13 +56,12 @@ main{
 .subCategories{
   width: 100%;
   position: absolute;
-  background-color: white;
-  border-bottom: 2px solid black;
+  background-color: #f7f7f7;
   display: flex;
   flex-direction: row;
   overflow: auto;
   z-index: 100;
-
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .subCategories::-webkit-scrollbar {
@@ -87,21 +96,17 @@ main{
 aside {
   height: 100vh;
   background-color: #fff;
-  width: 270px;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  border-left: 0px solid black;
+  border-right: 0px solid black;
   position: sticky;
   top: 0;
   bottom: 0;
 }
 
-/* Apply styles to the sidebar container */
-.sidebar-left {
-  min-width: 190px;
-  display: flex;
-  flex-direction: column;
-}
-  .sidebar-left a:hover {
+
+.sidebar-left a:hover {
     color: #08a88a;
   }
   
@@ -135,12 +140,11 @@ aside {
   /* Apply styles to the header */
 header {
     background-color: #f7f7f7;
-    padding: 10px 20px;
+    padding: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid black;
   }
   
   .search-bar img {
@@ -294,7 +298,18 @@ header {
 
 
 
-
+@media (max-width: 669px) {
+  .sideMenu{
+    position: absolute;
+  }
+  .mainCategories b {
+    display: none;
+  }
+  .sidebar-left{
+    z-index: 9999;
+    min-width: 77px;
+  }
+}
 
 
 @media (max-width: 801px) {
@@ -303,11 +318,6 @@ header {
   }
 }
 
-@media (max-width: 669px) {
-  .sidebar-left {
-    display: none;
-  }
-}
 
 @media (max-width: 420px) {
   .card {
@@ -333,3 +343,382 @@ header {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.line{
+  margin: auto;
+  height: 0;
+  width: 90%;
+  border: 1px solid #ddd;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* General styles */
+.sideMenu {
+  height: 100%;
+  background-color: rgb(17,24,39);
+  border-radius: 0 10px 0 0;
+}
+
+/* Common styles for categories and buttons */
+.mainCategories {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.mainCategoriesBtn {
+  width: fit-content;
+  border-style: none;
+  margin: 10px;
+  height: 50px;
+  color: #cacaca;
+  background-color: #111827;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer; /* Add a cursor pointer on hover */
+}
+
+.btnIconContainer{
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainCategoriesBtn svg {
+  margin: 5px;
+  height: 100%;
+  fill: #08a88a;
+  transition: opacity 0.3s ease; /* Smooth transition on hover */
+}
+
+.mainCategoriesBtn b {
+  font-weight: bold;
+  padding: 5px;
+}
+
+.dropdown {
+  white-space: nowrap;
+  display: none;
+  margin-left: 20px;
+  /* Additional styles for dropdown */
+}
+
+.dropdown a {
+  padding-left: 5px;
+  color: #cacaca;
+  text-decoration: none;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-left: 2px solid #08a88a;
+  margin-left: 15px;
+}
+
+.dropdown a:hover{
+  background-color: #08a88a;
+  color: white;
+}
+
+/* Dropdown visibility on hover */
+.mainCategories:hover .dropdown {
+  display: block;
+}
+
+.mainCategoriesBtn:hover{
+  background-color: #6a6970;
+}
+
+/* Animation on SVG hover */
+.mainCategoriesBtn:hover svg {
+  opacity: 0.7;
+  animation: flickerAnimation 1.5s infinite; /* Adjusted duration */
+}
+
+/* Dropdown visibility using pseudo-class */
+.mainCategoriesBtn:focus + .dropdown {
+  display: block;
+}
+
+/* Keyboard navigation focus styles */
+.mainCategoriesBtn:focus {
+  outline: none; /* Remove default focus outline */
+  border: 2px solid #08a88a; /* Add a custom focus style */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sidebar-right{
+  border-radius: 10px 0 0 0;
+  background-color: #0d0c22;
+}
+
+
+
+
+
+.cart-items {
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  overflow: auto;
+}
+
+.cart-items::-webkit-scrollbar{
+  display: none;
+}
+
+/* Apply styles to each cart item */
+.cart-items li {
+  margin: 10px;
+  overflow: auto;
+}
+
+
+/* Apply styles to the checkout section */
+.checkout {
+  width: auto;
+  padding: 10px;
+  position: sticky;
+  bottom: 0; /* Stick to the bottom */
+  border-radius: 10px;
+  background-color: #0d0c22 ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  
+/* Apply styles to the total price */
+#total-price {
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+.cssbuttons-io-button {
+  background: #08a88a;
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #714da6;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  margin: 5px;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cart-placeholder {
+  list-style: none;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.placeholder-box {
+  width: 100%;
+  height: 40px; /* Set the height of the placeholder box */
+  background-color: #ddd;
+  border-radius: 10px;
+  opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.profile{
+  height: 40px;
+  margin: 10px;
+  background-color: #0d0c22;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center   ;
+}
+
+.profile p{
+  color: white;
+  margin-left: 20px;
+}
+
+.profileImage{
+  background: linear-gradient(to right,rgb(128, 128, 128),rgb(32, 32, 32));
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.329);
+
+}
