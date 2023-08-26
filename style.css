@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300&display=swap');
-@import url('/font-awesome-6.4.0/css/font-awesome.min.css');
 
 *{
   margin: 0;
@@ -31,19 +30,21 @@ main{
 }
 
 .navbarBtn{
+  width: 100%;
   height: 60px;
   display: flex;
-  margin: auto;
+  padding-left: 20px;
   align-items: center;
-  justify-content: center;
   border-style: none;
   background-color: #111827;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+  border-radius: 0 10px 0 0;
 }
 
 .navbarBtn svg{
   fill: #f7f7f7;
   height: 20px;
-  margin: auto;
+  margin: 10px;
 }
 
 .subCategoriesContainer{
@@ -54,6 +55,7 @@ main{
 }
 
 .subCategories{
+  height: 60px;
   width: 100%;
   position: absolute;
   background-color: #f7f7f7;
@@ -139,12 +141,15 @@ aside {
 
   /* Apply styles to the header */
 header {
+    position: relative;
     background-color: #f7f7f7;
     padding: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 101;
   }
   
   .search-bar img {
@@ -331,10 +336,11 @@ header {
 
 
 .productCard{
-  width: 230px;
-  height: 330px;
-  border: 2px solid black;
-  box-shadow: 0 0 10px 0;
+  margin: 10px;
+  width: 200px;
+  height: 300px;
+  border: 1px solid black;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -388,12 +394,6 @@ header {
 
 
 
-.line{
-  margin: auto;
-  height: 0;
-  width: 90%;
-  border: 1px solid #ddd;
-}
 
 
 
@@ -580,13 +580,18 @@ header {
   padding: 10px;
   position: sticky;
   bottom: 0; /* Stick to the bottom */
-  border-radius: 10px;
   background-color: #0d0c22 ;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-top: 1px solid white;
 }
-  
+
+.checkout p{
+  color: white;
+}
+
+
 /* Apply styles to the total price */
 #total-price {
   font-weight: bold;
@@ -701,17 +706,19 @@ header {
 
 .profile{
   height: 40px;
-  margin: 10px;
+  padding: 10px;
   background-color: #0d0c22;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center   ;
+  justify-content: center;
+  border-radius: 10px 0 0 0;
 }
 
 .profile p{
   color: white;
-  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .profileImage{
