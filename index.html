@@ -10,86 +10,131 @@
 </head>
 <body>
 
-    <header>
-        
-        <div class="navbarIcon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M40 48C26.7 48 16 58.7 16 72v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24H40zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM16 232v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V232c0-13.3-10.7-24-24-24H40c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V392c0-13.3-10.7-24-24-24H40z"/></svg>
-        </div>
 
-        <div class="search-bar">
-            <img src="./img/logo.svg" alt="Logo" width="30" height="30">
-            <div class="group" >
-                <svg class="SearchIcon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
-                <input placeholder="Search" type="search" class="input">
+  <div class="loadingAnimation">
+    <style>
+  .loadingAnimation {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeOut 2s ease forwards;
+  }
+
+  @keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    pointer-events: none;
+  }
+}
+
+  </style><img height="30%" src="./img/logo.gif">
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <aside class="sidebar-left">
+
+
+
+
+    <nav class="sideMenu">
+
+
+
+      <button class="navbarBtn" id="menuBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24"><path d="M7,0H4A4,4,0,0,0,0,4V7a4,4,0,0,0,4,4H7a4,4,0,0,0,4-4V4A4,4,0,0,0,7,0ZM9,7A2,2,0,0,1,7,9H4A2,2,0,0,1,2,7V4A2,2,0,0,1,4,2H7A2,2,0,0,1,9,4Z"/><path d="M20,0H17a4,4,0,0,0-4,4V7a4,4,0,0,0,4,4h3a4,4,0,0,0,4-4V4A4,4,0,0,0,20,0Zm2,7a2,2,0,0,1-2,2H17a2,2,0,0,1-2-2V4a2,2,0,0,1,2-2h3a2,2,0,0,1,2,2Z"/><path d="M7,13H4a4,4,0,0,0-4,4v3a4,4,0,0,0,4,4H7a4,4,0,0,0,4-4V17A4,4,0,0,0,7,13Zm2,7a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V17a2,2,0,0,1,2-2H7a2,2,0,0,1,2,2Z"/><path d="M20,13H17a4,4,0,0,0-4,4v3a4,4,0,0,0,4,4h3a4,4,0,0,0,4-4V17A4,4,0,0,0,20,13Zm2,7a2,2,0,0,1-2,2H17a2,2,0,0,1-2-2V17a2,2,0,0,1,2-2h3a2,2,0,0,1,2,2Z"/></svg>
+      </button>
+  
+
+
+
+      <div class="mainCategories">
+          <button class="mainCategoriesBtn" aria-expanded="false" aria-haspopup="true">
+              <div class="btnIconContainer">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="512" height="512"><path d="M2,15c0,.55,.45,1,1,1H11c.55,0,1,.45,1,1s-.45,1-1,1H3c-1.65,0-3-1.35-3-3,0-1.3,.84-2.4,2-2.82V5C2,2.24,4.24,0,7,0h10c2.76,0,5,2.24,5,5v1c0,.55-.45,1-1,1s-1-.45-1-1v-1c0-1.65-1.35-3-3-3H7c-1.65,0-3,1.35-3,3v7h4.5c.27,0,.52,.11,.71,.29l.71,.71h1.09c.55,0,1,.45,1,1s-.45,1-1,1h-1.5c-.27,0-.52-.11-.71-.29l-.71-.71H3c-.55,0-1,.45-1,1Zm22-2v7c0,2.21-1.79,4-4,4h-2c-2.21,0-4-1.79-4-4v-7c0-2.21,1.79-4,4-4h2c2.21,0,4,1.79,4,4Zm-2,0c0-1.1-.9-2-2-2h-2c-1.1,0-2,.9-2,2v7c0,1.1,.9,2,2,2h2c1.1,0,2-.9,2-2v-7Z"/></svg>
               </div>
-        </div>
-
-        <div class="navbarIcon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
-        </div>
-
-    </header>
-    <div class="container">
-        <aside class="sidebar-left">
-
-          <div class="mainCategories">
-            <button class="mainCategoriesBtn">
-              <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 640 512"><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM288 160c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v48h48c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H352v48c0 8.8-7.2 16-16 16H304c-8.8 0-16-7.2-16-16V272H240c-8.8 0-16-7.2-16-16V224c0-8.8 7.2-16 16-16h48V160z"/></svg>
-                <b>ELECTRONICS</b></button>
-            <div class="dropdown">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-            </div>
+              <b>Electronics</b>
+          </button>
+          <div class="dropdown" id="electronics">
+              <a href="#electronics">Laptop</a>
+              <a href="#electronics">Phones</a>
+              <a href="#electronics">Tablets</a>
           </div>
+      </div>
 
-          <div class="mainCategories">
-            <button class="mainCategoriesBtn">
-              <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
-              <b>BOOKS</b></button>
-            <div class="dropdown">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-            </div>
+      <div class="mainCategories">
+          <button class="mainCategoriesBtn" aria-expanded="false" aria-haspopup="true">
+              <div class="btnIconContainer">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="512" height="512"><path d="M22.2,2.163a4.992,4.992,0,0,0-4.1-1.081l-3.822.694A4,4,0,0,0,12,3.065,4,4,0,0,0,9.716,1.776L5.9,1.082A5,5,0,0,0,0,6V16.793a5,5,0,0,0,4.105,4.919l6.286,1.143a9,9,0,0,0,3.218,0L19.9,21.712A5,5,0,0,0,24,16.793V6A4.983,4.983,0,0,0,22.2,2.163ZM11,20.928c-.084-.012-.168-.026-.252-.041L4.463,19.745A3,3,0,0,1,2,16.793V6A3,3,0,0,1,5,3a3.081,3.081,0,0,1,.54.049l3.82.7A2,2,0,0,1,11,5.712Zm11-4.135a3,3,0,0,1-2.463,2.952l-6.285,1.142c-.084.015-.168.029-.252.041V5.712a2,2,0,0,1,1.642-1.968l3.821-.7A3,3,0,0,1,22,6Z"/></svg>
+              </div>
+              <b>Books</b>
+          </button>
+          <div class="dropdown" id="electronics">
+              <a href="#electronics">Novesl</a>
+              <a href="#electronics">Fiction</a>
+              <a href="#electronics">History</a>
           </div>
+      </div>
 
-          <div class="mainCategories">
-            <button class="mainCategoriesBtn">
-              <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 640 512"><path d="M211.8 0c7.8 0 14.3 5.7 16.7 13.2C240.8 51.9 277.1 80 320 80s79.2-28.1 91.5-66.8C413.9 5.7 420.4 0 428.2 0h12.6c22.5 0 44.2 7.9 61.5 22.3L628.5 127.4c6.6 5.5 10.7 13.5 11.4 22.1s-2.1 17.1-7.8 23.6l-56 64c-11.4 13.1-31.2 14.6-44.6 3.5L480 197.7V448c0 35.3-28.7 64-64 64H224c-35.3 0-64-28.7-64-64V197.7l-51.5 42.9c-13.3 11.1-33.1 9.6-44.6-3.5l-56-64c-5.7-6.5-8.5-15-7.8-23.6s4.8-16.6 11.4-22.1L137.7 22.3C155 7.9 176.7 0 199.2 0h12.6z"/></svg>
-              <b>CLOTHING</b></button>
-            <div class="dropdown">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-            </div>
+      <div class="mainCategories">
+          <button class="mainCategoriesBtn" aria-expanded="false" aria-haspopup="true">
+              <div class="btnIconContainer">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="512" height="512"><path d="M22.12,10.504c-.712-1.031-1.12-1.943-1.12-2.504v-2.935c0-2.563-1.91-4.699-4.443-4.969-.056-.006-.787-.096-1.557-.096h-6c-.692,0-1.5,.09-1.557,.096C4.91,.366,3,2.502,3,5.065v2.935c0,.561-.408,1.473-1.12,2.504-.576,.833-.88,1.811-.88,2.83v5.666c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5v-5.666c0-1.019-.304-1.998-.88-2.83Zm-10.12-1.43l-2.573-7.074h5.145l-2.573,7.074ZM3,19v-2H7c.553,0,1-.448,1-1s-.447-1-1-1H3v-1.666c0-.611,.182-1.196,.524-1.693,.979-1.417,1.476-2.642,1.476-3.641v-2.935c0-1.432,.99-2.641,2.349-2.931l3.651,10.041v9.825H6c-1.654,0-3-1.346-3-3Zm15,3h-5V12.175l3.651-10.041c1.359,.29,2.349,1.5,2.349,2.931v2.935c0,.999,.496,2.224,1.476,3.641,.343,.497,.524,1.083,.524,1.693v1.666h-4c-.553,0-1,.448-1,1s.447,1,1,1h4v2c0,1.654-1.346,3-3,3Z"/></svg>
+              </div>
+              <b>Clothes</b>
+          </button>
+          <div class="dropdown" id="electronics">
+              <a href="#electronics">Men</a>
+              <a href="#electronics">Women</a>
+              <a href="#electronics">Kids</a>
           </div>
+      </div>
 
-          <div class="mainCategories">
-            <button class="mainCategoriesBtn">
-              <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 640 512"><path d="M96 64c0-17.7 14.3-32 32-32h32c17.7 0 32 14.3 32 32V224v64V448c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V384H64c-17.7 0-32-14.3-32-32V288c-17.7 0-32-14.3-32-32s14.3-32 32-32V160c0-17.7 14.3-32 32-32H96V64zm448 0v64h32c17.7 0 32 14.3 32 32v64c17.7 0 32 14.3 32 32s-14.3 32-32 32v64c0 17.7-14.3 32-32 32H544v64c0 17.7-14.3 32-32 32H480c-17.7 0-32-14.3-32-32V288 224 64c0-17.7 14.3-32 32-32h32c17.7 0 32 14.3 32 32zM416 224v64H224V224H416z"/></svg>
-              <b>GYM</b></button>
-            <div class="dropdown">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-            </div>
+      <div class="mainCategories">
+          <button class="mainCategoriesBtn" aria-expanded="false" aria-haspopup="true">
+              <div class="btnIconContainer">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="512" height="512"><path d="M12,7.364v-1.364h1c.552,0,1-.448,1-1s-.448-1-1-1h-1c0-2.206-1.794-4-4-4S4,1.794,4,4v3.364C1.615,8.623,0,11.257,0,14v5c0,2.757,2.243,5,5,5h6c2.757,0,5-2.243,5-5v-5c0-2.743-1.615-5.377-4-6.636Zm-6-3.364c0-1.103,.897-2,2-2s2,.897,2,2v3H6v-3Zm8,15c0,1.654-1.346,3-3,3H5c-1.654,0-3-1.346-3-3v-5c0-2.085,1.337-4.156,3.204-5h5.591c1.867,.844,3.204,2.915,3.204,5v5Zm-5-6h-2c-1.654,0-3,1.346-3,3s1.346,3,3,3h2c1.654,0,3-1.346,3-3s-1.346-3-3-3Zm0,4h-2c-.551,0-1-.449-1-1s.449-1,1-1h2c.551,0,1,.449,1,1s-.449,1-1,1ZM18,5c0,.552-.448,1-1,1s-1-.448-1-1,.448-1,1-1,1,.448,1,1Zm6,0c0,.552-.448,1-1,1s-1-.448-1-1,.448-1,1-1,1,.448,1,1Zm-2-4c0-.552,.448-1,1-1s1,.448,1,1-.448,1-1,1-1-.448-1-1Zm2,8c0,.552-.448,1-1,1s-1-.448-1-1,.448-1,1-1,1,.448,1,1Zm-3-6c0,.552-.448,1-1,1s-1-.448-1-1,.448-1,1-1,1,.448,1,1Zm0,4c0,.552-.448,1-1,1s-1-.448-1-1,.448-1,1-1,1,.448,1,1Z"/></svg>
+              </div>
+              <b>Cosmetics</b>
+          </button>
+          <div class="dropdown" id="electronics">
+              <a href="#electronics">Skin care</a>
+              <a href="#electronics">Make up</a>
+              <a href="#electronics">Hair</a>
           </div>
-
-          <div class="mainCategories">
-            <button class="mainCategoriesBtn">
-              <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><path d="M116.7 33.8c4.5-6.1 11.7-9.8 19.3-9.8H376c7.6 0 14.8 3.6 19.3 9.8l112 152c6.8 9.2 6.1 21.9-1.5 30.4l-232 256c-4.5 5-11 7.9-17.8 7.9s-13.2-2.9-17.8-7.9l-232-256c-7.7-8.5-8.3-21.2-1.5-30.4l112-152zm38.5 39.8c-3.3 2.5-4.2 7-2.1 10.5l57.4 95.6L63.3 192c-4.1 .3-7.3 3.8-7.3 8s3.2 7.6 7.3 8l192 16c.4 0 .9 0 1.3 0l192-16c4.1-.3 7.3-3.8 7.3-8s-3.2-7.6-7.3-8L301.5 179.8l57.4-95.6c2.1-3.5 1.2-8.1-2.1-10.5s-7.9-2-10.7 1L256 172.2 165.9 74.6c-2.8-3-7.4-3.4-10.7-1z"/></svg>
-              <b>COSMETICS</b></button>
-            <div class="dropdown">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-            </div>
-          </div>
+      </div>
 
 
 
 
+
+  </nav>
+
+
+
+
+
+  </aside>
 
 
 
@@ -101,9 +146,33 @@
 
 
 
-        </aside>
+
+
+
+
+      
 
         <main>
+
+
+          <header>
+        
+    
+            <div class="search-bar">
+                <img src="./img/logo.svg" alt="Logo" width="30" height="30">
+                <div class="group" >
+                    <svg class="SearchIcon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+                    <input placeholder="Search" type="search" class="input">
+                  </div>
+            </div>
+    
+    
+        </header>
+
+        
+
+
+
 
           <div class="subCategoriesContainer">
 
@@ -135,218 +204,52 @@
           <div class="cardsContainer">
 
 
+            <div class="productCard"></div>
+            <div class="productCard"></div>
+            <div class="productCard"></div>
+            <div class="productCard"></div>
+            <div class="productCard"></div>
+            <div class="productCard"></div>
+            <div class="productCard"></div>
+            <div class="productCard"></div>
+            <div class="productCard"></div>
+            <div class="productCard"></div>
+            <div class="productCard"></div>
+            <div class="productCard"></div>
+            <div class="productCard"></div>
+            <div class="productCard"></div>
+            <div class="productCard"></div>
+            <div class="productCard"></div>
+            <div class="productCard"></div>
+            <div class="productCard"></div>
+            <div class="productCard"></div>
+            <div class="productCard"></div>
+            <div class="productCard"></div>
+            <div class="productCard"></div>
+            <div class="productCard"></div>
+            <div class="productCard"></div>
 
-            <div class="card"><img src="img/logo.png">NERA<button class="CartBtn">
-                <span class="IconContainer"> 
-                  <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
-                </span>
-                <p class="text">Add to Cart</p>
-              </button></div>  
 
-            <div class="card"><img src="img/logo.png">NERA<button class="CartBtn">
-  <span class="IconContainer"> 
-    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
-  </span>
-  <p class="text">Add to Cart</p>
-</button></div>
 
-            <div class="card"><img src="img/logo.png">NERA<button class="CartBtn">
-  <span class="IconContainer"> 
-    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
-  </span>
-  <p class="text">Add to Cart</p>
-</button></div>
-  
-            <div class="card"><img src="img/logo.png">NERA<button class="CartBtn">
-  <span class="IconContainer"> 
-    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
-  </span>
-  <p class="text">Add to Cart</p>
-</button></div>
 
-            <div class="card"><img src="img/logo.png">NERA<button class="CartBtn">
-  <span class="IconContainer"> 
-    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
-  </span>
-  <p class="text">Add to Cart</p>
-</button></div>  
 
-            <div class="card"><img src="img/logo.png">NERA<button class="CartBtn">
-  <span class="IconContainer"> 
-    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
-  </span>
-  <p class="text">Add to Cart</p>
-</button></div>
 
-            <div class="card"><img src="img/logo.png">NERA<button class="CartBtn">
-  <span class="IconContainer"> 
-    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
-  </span>
-  <p class="text">Add to Cart</p>
-</button></div>
-  
-            <div class="card"><img src="img/logo.png">NERA<button class="CartBtn">
-  <span class="IconContainer"> 
-    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
-  </span>
-  <p class="text">Add to Cart</p>
-</button></div>
 
-            <div class="card"><img src="img/logo.png">NERA<button class="CartBtn">
-  <span class="IconContainer"> 
-    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
-  </span>
-  <p class="text">Add to Cart</p>
-</button></div>  
 
-            <div class="card"><img src="img/logo.png">NERA<button class="CartBtn">
-  <span class="IconContainer"> 
-    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
-  </span>
-  <p class="text">Add to Cart</p>
-</button></div>
 
-            <div class="card"><img src="img/logo.png">NERA<button class="CartBtn">
-  <span class="IconContainer"> 
-    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
-  </span>
-  <p class="text">Add to Cart</p>
-</button></div>
-  
-            <div class="card"><img src="img/logo.png">NERA<button class="CartBtn">
-  <span class="IconContainer"> 
-    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
-  </span>
-  <p class="text">Add to Cart</p>
-</button></div>
 
-            <div class="card"><img src="img/logo.png">NERA<button class="CartBtn">
-  <span class="IconContainer"> 
-    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
-  </span>
-  <p class="text">Add to Cart</p>
-</button></div>  
 
-            <div class="card"><img src="img/logo.png">NERA<button class="CartBtn">
-  <span class="IconContainer"> 
-    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
-  </span>
-  <p class="text">Add to Cart</p>
-</button></div>
 
-            <div class="card"><img src="img/logo.png">NERA<button class="CartBtn">
-  <span class="IconContainer"> 
-    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
-  </span>
-  <p class="text">Add to Cart</p>
-</button></div>
-  
-            <div class="card"><img src="img/logo.png">NERA<button class="CartBtn">
-  <span class="IconContainer"> 
-    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
-  </span>
-  <p class="text">Add to Cart</p>
-</button></div>
 
-<div class="card"><img src="img/logo.png">NERA<button class="CartBtn">
-  <span class="IconContainer"> 
-    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
-  </span>
-  <p class="text">Add to Cart</p>
-</button></div>
-  
-            <div class="card"><img src="img/logo.png">NERA<button class="CartBtn">
-  <span class="IconContainer"> 
-    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
-  </span>
-  <p class="text">Add to Cart</p>
-</button></div>
 
-<div class="card"><img src="img/logo.png">NERA<button class="CartBtn">
-  <span class="IconContainer"> 
-    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
-  </span>
-  <p class="text">Add to Cart</p>
-</button></div>
-  
-            <div class="card"><img src="img/logo.png">NERA<button class="CartBtn">
-  <span class="IconContainer"> 
-    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
-  </span>
-  <p class="text">Add to Cart</p>
-</button></div>
-<div class="card"><img src="img/logo.png">NERA<button class="CartBtn">
-  <span class="IconContainer"> 
-    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
-  </span>
-  <p class="text">Add to Cart</p>
-</button></div>
-  
-            <div class="card"><img src="img/logo.png">NERA<button class="CartBtn">
-  <span class="IconContainer"> 
-    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
-  </span>
-  <p class="text">Add to Cart</p>
-</button></div>
+
 
 
 
           </div>
         </main>
 
-        <aside class="sidebar-right">
-                <ul class="cart-items">
-
-                    <li class="cart-placeholder">
-                        <div class="placeholder-box"></div>
-                      </li>
-                      <li class="cart-placeholder">
-                        <div class="placeholder-box"></div>
-                      </li>
-                      <li class="cart-placeholder">
-                        <div class="placeholder-box"></div>
-                      </li>
-                      <li class="cart-placeholder">
-                        <div class="placeholder-box"></div>
-                      </li>
-                      <li class="cart-placeholder">
-                        <div class="placeholder-box"></div>
-                      </li>
-                      <li class="cart-placeholder">
-                        <div class="placeholder-box"></div>
-                      </li><li class="cart-placeholder">
-                        <div class="placeholder-box"></div>
-                      </li>
-                      <li class="cart-placeholder">
-                        <div class="placeholder-box"></div>
-                      </li>
-                      <li class="cart-placeholder">
-                        <div class="placeholder-box"></div>
-                      </li><li class="cart-placeholder">
-                        <div class="placeholder-box"></div>
-                      </li>
-                      <li class="cart-placeholder">
-                        <div class="placeholder-box"></div>
-                      </li>
-                      <li class="cart-placeholder">
-                        <div class="placeholder-box"></div>
-                      </li>
-
-                  <!-- Cart items will be dynamically added here using JavaScript -->
-                </ul>
-
-                <div class="checkout">
-                    <p>Total: $<span id="total-price">0.00</span></p>
-                    <button class="checkoutBtn"> CHECKOUT
-                      <div class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
-                      </div>
-                    </button>
-                </div>
-        </aside>
     
-    </div>
-
 
 
 
@@ -364,6 +267,75 @@
 
 
 
+    <aside class="sidebar-right">
+
+
+
+      <div class="profile">
+
+        <p>User007</p>
+        <div class="profileImage"></div>
+      
+      </div>
+
+
+
+
+
+      <ul class="cart-items">
+
+        <li class="cart-placeholder">
+            <div class="placeholder-box"></div>
+          </li>
+          <li class="cart-placeholder">
+            <div class="placeholder-box"></div>
+          </li>
+          <li class="cart-placeholder">
+            <div class="placeholder-box"></div>
+          </li>
+          <li class="cart-placeholder">
+            <div class="placeholder-box"></div>
+          </li>
+          <li class="cart-placeholder">
+            <div class="placeholder-box"></div>
+          </li>
+          <li class="cart-placeholder">
+            <div class="placeholder-box"></div>
+          </li><li class="cart-placeholder">
+            <div class="placeholder-box"></div>
+          </li>
+          <li class="cart-placeholder">
+            <div class="placeholder-box"></div>
+          </li>
+          <li class="cart-placeholder">
+            <div class="placeholder-box"></div>
+          </li><li class="cart-placeholder">
+            <div class="placeholder-box"></div>
+          </li>
+          <li class="cart-placeholder">
+            <div class="placeholder-box"></div>
+          </li>
+          <li class="cart-placeholder">
+            <div class="placeholder-box"></div>
+          </li>
+    
+      <!-- Cart items will be dynamically added here using JavaScript -->
+    </ul>
+    
+
+
+
+
+
+
+    <div class="checkout">
+        <p>Total: $<span id="total-price">0.00</span></p>
+        <button class="cssbuttons-io-button"> Checkout
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
+          </div>
+        </button>    </div>
+    
 
 
 
@@ -376,6 +348,26 @@
 
 
 
-  <script src="script.js"></script>
+
+
+    </aside>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
 </body>
 </html>
