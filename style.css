@@ -768,14 +768,14 @@ header {
 }
 
 .bottomMenuBtn{
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   margin: auto;
 }
 
 .bottomMenuBtn svg{
   height: 100%;
   width: 100%;
-
-
+  opacity: 0.9;
+  fill: #111827;
 }
