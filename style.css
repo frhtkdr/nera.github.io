@@ -5,6 +5,12 @@
   font-family: 'Poppins';
 }
 
+@media screen and (max-width:600px) {
+  *{
+  }
+  
+}
+
 body{
   overflow-x: hidden;
   display: flex;
@@ -66,7 +72,7 @@ main{
   flex-direction: row;
   overflow: auto;
   z-index: 100;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .subCategories::-webkit-scrollbar {
@@ -118,20 +124,76 @@ aside {
 
 
   
+.rightMenu{
+   height: 100vh;
+   width: 150px;
+   background-color: #f7f7f7;
+   box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+   display: flex;
+   flex-direction: column;
+   position: sticky;
+   right: 0;
+  }
 
 
 
+.rightMenuBtn {
+  height: 60px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  text-decoration: none;
+  color: #212121;
+}
 
+.rightMenuBtn svg {
+  width: 25px;
+  height: 25px;
+  margin: 20px;
+  fill: #212121;
+  opacity: 0.9;
+}
 
+.profileMenu{
+  width: 100%;
+  height: 0%;
+}
 
+.messagesMenu {
+  width: 100%;
+  height: 0%;
+}
 
+.couponsMenu {
+  width: 100%;
+  height: 0%;
+}
 
+.cartMenu {
+  width: 100%;
+  height: 0%;
+}
 
-  
+#profileMenu:target{    
+  height: 100%;
+  border-bottom: 1px solid #212121;
+}
 
+#messagesMenu:target{
+  height: 100%;
+  border-bottom: 1px solid #212121;
+}
 
+#couponsMenu:target{ 
+  height: 100%;
+  border-bottom: 1px solid #212121;
+}
 
-
+#cartMenu:target{
+  height: 100%;
+  border-bottom: 1px solid #212121;
+}
 
 
 
@@ -151,7 +213,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 101;
   }
   
@@ -298,7 +360,9 @@ header {
 
 
 
-
+.bottomMenu{
+  display: none;
+}
 
 
 
@@ -321,8 +385,20 @@ header {
 
 
 @media (max-width: 801px) {
-  .sidebar-right {
+    .rightMenu {
     display: none;
+  }
+
+  .bottomMenu {
+    height: 60px;
+    background-color: #f7f7f7;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    bottom: 0;
   }
 }
 
@@ -338,14 +414,17 @@ header {
 
 
 
+
+
 .productCard{
   margin: 10px;
-  width: 200px;
-  height: 300px;
+  width: 230px;
+  height: 330px;
   border: 1px solid black;
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
+
 
 
 
@@ -551,55 +630,13 @@ header {
 
 
 
-.sidebar-right{
-  border-radius: 10px 0 0 0;
-  background-color: #0d0c22;
-}
-
-
-
-
-
-.cart-items {
-  height: 100%;
-  list-style: none;
-  padding: 0;
-  overflow: auto;
-}
 
-.cart-items::-webkit-scrollbar{
-  display: none;
-}
 
-/* Apply styles to each cart item */
-.cart-items li {
-  margin: 10px;
-  overflow: auto;
-}
 
 
-/* Apply styles to the checkout section */
-.checkout {
-  width: auto;
-  padding: 10px;
-  position: sticky;
-  bottom: 0; /* Stick to the bottom */
-  background-color: #0d0c22 ;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-top: 1px solid white;
-}
 
-.checkout p{
-  color: white;
-}
 
 
-/* Apply styles to the total price */
-#total-price {
-  font-weight: bold;
-}
 
 
 
@@ -608,166 +645,8 @@ header {
 
 
 
-.cssbuttons-io-button {
-  background: #08a88a;
-  color: white;
-  font-family: inherit;
-  padding: 0.35em;
-  padding-left: 1.2em;
-  font-size: 17px;
-  font-weight: 500;
-  border-radius: 0.9em;
-  border: none;
-  letter-spacing: 0.05em;
-  display: flex;
-  align-items: center;
-  box-shadow: inset 0 0 1.6em -0.6em #714da6;
-  overflow: hidden;
-  position: relative;
-  height: 2.8em;
-  padding-right: 3.3em;
-  margin: 5px;
-}
 
-.cssbuttons-io-button .icon {
-  background: white;
-  margin-left: 1em;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 2.2em;
-  width: 2.2em;
-  border-radius: 0.7em;
-  box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
-  right: 0.3em;
-  transition: all 0.3s;
-}
 
-.cssbuttons-io-button:hover .icon {
-  width: calc(100% - 0.6em);
-}
-
-.cssbuttons-io-button .icon svg {
-  width: 1.1em;
-  transition: transform 0.3s;
-  color: #7b52b9;
-}
-
-.cssbuttons-io-button:hover .icon svg {
-  transform: translateX(0.1em);
-}
-
-.cssbuttons-io-button:active .icon {
-  transform: scale(0.95);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.cart-placeholder {
-  list-style: none;
-  padding: 10px;
-  border-radius: 4px;
-}
-
-.placeholder-box {
-  width: 100%;
-  height: 40px; /* Set the height of the placeholder box */
-  background-color: #ddd;
-  border-radius: 10px;
-  opacity: 0.5;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.profile{
-  height: 40px;
-  padding: 10px;
-  background-color: #0d0c22;
-  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px 0 0 0;
-}
-
-.profile p{
-  color: white;
-  margin-right: 20px;
-}
-
-.profileImage{
-  background: linear-gradient(to right,rgb(128, 128, 128),rgb(32, 32, 32));
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.329);
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.bottomMenu{
-  height: 60px;
-  background-color: #f7f7f7;
-  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  position: sticky;
-  bottom: 0;
-  opacity: 0.9;
-}
 
 .bottomMenuBtn{
   width: 25px;
