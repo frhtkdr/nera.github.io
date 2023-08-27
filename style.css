@@ -378,7 +378,7 @@ header {
     display: none;
   }
   .sidebar-left{
-    z-index: 9999;
+    z-index: 999;
     min-width: 77px;
   }
 }
