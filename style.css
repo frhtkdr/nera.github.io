@@ -1,42 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300&display=swap');
 
-* {
+*{
   margin: 0;
   font-family: 'Poppins';
 }
 
 @media screen and (max-width:600px) {
-  * {}
-
+  *{
+  }
+  
 }
 
-body {
+body{
   overflow-x: hidden;
   display: flex;
   flex-direction: row;
 }
 
-.search-bar {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+.search-bar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .search-bar img {
-  padding: 5px;
+    padding: 5px;
 }
 
 
-main {
-  width: 100%;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
+main{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
-.navbarBtn {
+.navbarBtn{
   width: 100%;
   height: 60px;
   display: flex;
@@ -48,20 +49,20 @@ main {
   border-radius: 0 10px 0 0;
 }
 
-.navbarBtn svg {
+.navbarBtn svg{
   fill: #f7f7f7;
   height: 20px;
   margin: 10px;
 }
 
-.subCategoriesContainer {
+.subCategoriesContainer{
   width: 100%;
   z-index: 100;
   position: sticky;
   top: 0;
 }
 
-.subCategories {
+.subCategories{
   height: 60px;
   width: 100%;
   position: absolute;
@@ -79,7 +80,7 @@ main {
 }
 
 
-.subCategoriesBtn {
+.subCategoriesBtn{
   color: white;
   margin: 10px;
   padding: 5px;
@@ -87,7 +88,7 @@ main {
   border-radius: 9px;
 }
 
-.cardsContainer {
+.cardsContainer{
   display: flex;
   flex-direction: row;
   flex-flow: row wrap;
@@ -102,7 +103,7 @@ main {
 
 
 
-/* Apply styles to the entire aside element */
+  /* Apply styles to the entire aside element */
 aside {
   height: 100vh;
   background-color: #f7f7f7;
@@ -117,48 +118,44 @@ aside {
 
 
 .sidebar-left a:hover {
-  color: #08a88a;
-}
+    color: #08a88a;
+  }
+  
 
 
-
-
-.rightMenu {
-  height: 100vh;
-  width: 150px;
-  background-color: #08a88a;
-  box-shadow: -4px 0 6px rgba(255, 255, 255, 0.1);
-  display: flex;
-  flex-direction: column;
-  position: sticky;
-  right: 0;
-}
+  
+.rightMenu{
+   height: 100vh;
+   width: 150px;
+   background-color: #f7f7f7;
+   box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+   display: flex;
+   flex-direction: column;
+   position: sticky;
+   right: 0;
+  }
 
 
 
 .rightMenuBtn {
   height: 60px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  background: #212121;
-  opacity: 0.5;
-  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: right;
   text-decoration: none;
-  color: #f7f7f7;
+  color: #212121;
 }
-
 
 .rightMenuBtn svg {
   width: 25px;
   height: 25px;
   margin: 20px;
-  fill: #f7f7f7;
+  fill: #212121;
   opacity: 0.9;
 }
 
-.profileMenu {
+.profileMenu{
   width: 100%;
   height: 0%;
 }
@@ -178,22 +175,22 @@ aside {
   height: 0%;
 }
 
-#profileMenu:target {
+#profileMenu:target{    
   height: 100%;
   border-bottom: 1px solid #212121;
 }
 
-#messagesMenu:target {
+#messagesMenu:target{
   height: 100%;
   border-bottom: 1px solid #212121;
 }
 
-#couponsMenu:target {
+#couponsMenu:target{ 
   height: 100%;
   border-bottom: 1px solid #212121;
 }
 
-#cartMenu:target {
+#cartMenu:target{
   height: 100%;
   border-bottom: 1px solid #212121;
 }
@@ -207,33 +204,31 @@ aside {
 
 
 
-/* Apply styles to the header */
+  /* Apply styles to the header */
 header {
-  position: relative;
-  background-color: #f7f7f7;
-  padding: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 101;
-}
-
-.search-bar img {
-  margin-right: 10px;
-}
-
-.input {
-  border: none;
-  outline: none;
-  font-size: 14px;
-  padding: 5px 10px;
-}
-
-
-
-
+    position: relative;
+    background-color: #f7f7f7;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 101;
+  }
+  
+  .search-bar img {
+    margin-right: 10px;
+  }
+  
+  .input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+  
+  
 
 
 
@@ -264,52 +259,53 @@ header {
 
 
 
-.group {
-  display: flex;
-  line-height: 28px;
-  align-items: center;
-  position: relative;
-  max-width: 190px;
-}
-
-.input {
-  width: 100%;
-  height: 40px;
-  line-height: 28px;
-  padding: 0 1rem;
-  padding-left: 2.5rem;
-  border: 2px solid transparent;
-  border-radius: 8px;
-  outline: none;
-  background-color: #fff;
-  color: #0d0c22;
-  transition: .3s ease;
-}
-
-.SearchIcon::placeholder {
-  color: #9e9ea7;
-}
-
-.SearchIcon:focus,
-input:hover {
-  outline: none;
-  border-color: #08a88a;
-  box-shadow: 0 0 0 4px rgb(8, 168, 138, 10%);
-}
-
-.SearchIcon {
-  position: absolute;
-  left: 10px;
-  fill: #9e9ea7;
-  width: 1rem;
-  height: 1rem;
-}
 
 
-
-
-
-
+  .group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 190px;
+   }
+   
+   .input {
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #fff;
+    color: #0d0c22;
+    transition: .3s ease;
+   }
+   
+   .SearchIcon::placeholder {
+    color: #9e9ea7;
+   }
+   
+   .SearchIcon:focus, input:hover {
+    outline: none;
+    border-color: #08a88a;
+    box-shadow: 0 0 0 4px rgb(8, 168, 138, 10%) ;
+   }
+   
+   .SearchIcon {
+    position: absolute;
+    left: 10px;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+   }
+   
+   
+   
+   
+   
+   
 
 
 
@@ -347,7 +343,7 @@ input:hover {
 
 }
 
-.bestDealsBox {
+.bestDealsBox{
   position: static;
   margin-top: 76px;
   margin-bottom: 10px;
@@ -357,14 +353,14 @@ input:hover {
   height: 256px;
   padding: 5px;
   border-radius: 17px;
-  background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
 }
 
 
 
 
 
-.bottomMenu {
+.bottomMenu{
   display: none;
 }
 
@@ -375,15 +371,13 @@ input:hover {
 
 
 @media (max-width: 669px) {
-  .sideMenu {
+  .sideMenu{
     position: absolute;
   }
-
   .mainCategories b {
     display: none;
   }
-
-  .sidebar-left {
+  .sidebar-left{
     z-index: 999;
     min-width: 77px;
   }
@@ -391,7 +385,7 @@ input:hover {
 
 
 @media (max-width: 801px) {
-  .rightMenu {
+    .rightMenu {
     display: none;
   }
 
@@ -422,90 +416,30 @@ input:hover {
 
 
 
-.productCard {
+.productCard{
   margin: 10px;
-  width: 220px;
-  height: 320px;
+  width: 230px;
+  height: 330px;
   border: 1px solid black;
   border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-
-
-/* 3d book effect _____________________________________________*/
-
-
-
-
-section {
-  margin: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform-style: preserve-3d;
-  perspective: 1000px;
-}
-
-section .book {
-  position: relative;
-  width: 200px;
-  height: 300px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
-  transform-style: preserve-3d;
-  transition: 0.5s;
-}
-
-section .book:hover {
-  transform: rotateY(35deg);
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-}
-
-section .book:active {
-  transform: rotateY(180deg);
-}
-
-section .book:before {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 100%;
-  transform-origin: left;
-  background: url(./book/img/side.jpg);
-  background-position: center;
-  background-size: cover;
-  transform: rotateY(90deg);
-}
-
-section .book:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform-origin: left;
-  background: url(./book/img/back.jpg);
-  background-position: center;
-  background-size: cover;
-  transform: rotateY(180deg) translateZ(20px);
-}
-
-section .book img {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 
 
 
 
-/* 3d book effect _____________________________________________*/
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -558,7 +492,7 @@ section .book img {
 /* General styles */
 .sideMenu {
   height: 100%;
-  background-color: rgb(17, 24, 39);
+  background-color: rgb(17,24,39);
   border-radius: 0 10px 0 0;
 }
 
@@ -579,11 +513,10 @@ section .book img {
   display: flex;
   align-items: center;
   border-radius: 10px;
-  cursor: pointer;
-  /* Add a cursor pointer on hover */
+  cursor: pointer; /* Add a cursor pointer on hover */
 }
 
-.btnIconContainer {
+.btnIconContainer{
   width: 35px;
   height: 35px;
   display: flex;
@@ -595,8 +528,7 @@ section .book img {
   margin: 5px;
   height: 100%;
   fill: #08a88a;
-  transition: opacity 0.3s ease;
-  /* Smooth transition on hover */
+  transition: opacity 0.3s ease; /* Smooth transition on hover */
 }
 
 .mainCategoriesBtn b {
@@ -624,7 +556,7 @@ section .book img {
   margin-left: 15px;
 }
 
-.dropdown a:hover {
+.dropdown a:hover{
   background-color: #08a88a;
   color: white;
 }
@@ -634,28 +566,25 @@ section .book img {
   display: block;
 }
 
-.mainCategoriesBtn:hover {
+.mainCategoriesBtn:hover{
   background-color: #6a6970;
 }
 
 /* Animation on SVG hover */
 .mainCategoriesBtn:hover svg {
   opacity: 0.7;
-  animation: flickerAnimation 1.5s infinite;
-  /* Adjusted duration */
+  animation: flickerAnimation 1.5s infinite; /* Adjusted duration */
 }
 
 /* Dropdown visibility using pseudo-class */
-.mainCategoriesBtn:focus+.dropdown {
+.mainCategoriesBtn:focus + .dropdown {
   display: block;
 }
 
 /* Keyboard navigation focus styles */
 .mainCategoriesBtn:focus {
-  outline: none;
-  /* Remove default focus outline */
-  border: 2px solid #08a88a;
-  /* Add a custom focus style */
+  outline: none; /* Remove default focus outline */
+  border: 2px solid #08a88a; /* Add a custom focus style */
 }
 
 
@@ -719,13 +648,13 @@ section .book img {
 
 
 
-.bottomMenuBtn {
+.bottomMenuBtn{
   width: 25px;
   height: 25px;
   margin: auto;
 }
 
-.bottomMenuBtn svg {
+.bottomMenuBtn svg{
   height: 100%;
   width: 100%;
   opacity: 0.9;
