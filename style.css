@@ -405,8 +405,7 @@ input:hover {
     justify-content: center;
     position: sticky;
     bottom: 0;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    transform: translateZ(0);
   }
 }
 
@@ -450,7 +449,7 @@ section {
   align-items: center;
   transform-style: preserve-3d;
   perspective: 1000px;
-  user-select: none;
+  touch-action: none;
 }
 
 section .book {
