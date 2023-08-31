@@ -449,7 +449,6 @@ section {
   align-items: center;
   transform-style: preserve-3d;
   perspective: 1000px;
-  touch-action: none;
 }
 
 section .book {
@@ -480,6 +479,7 @@ section .book:before {
   background-position: center;
   background-size: cover;
   transform: rotateY(90deg);
+  touch-action: none;
 }
 
 section .book:after {
@@ -492,6 +492,7 @@ section .book:after {
   background-position: center;
   background-size: cover;
   transform: rotateY(180deg) translateZ(20px);
+  touch-action: none;
 }
 
 section .book img {
