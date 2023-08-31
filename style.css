@@ -397,15 +397,16 @@ input:hover {
 
   .bottomMenu {
     height: 60px;
+    width: calc(100% - 77px);
     background-color: #f7f7f7;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    position: sticky;
+    position: fixed;
     bottom: 0;
-    transform: translateZ(0);
+    right: 0;
   }
 }
 
@@ -479,7 +480,6 @@ section .book:before {
   background-position: center;
   background-size: cover;
   transform: rotateY(90deg);
-  touch-action: none;
 }
 
 section .book:after {
@@ -492,7 +492,6 @@ section .book:after {
   background-position: center;
   background-size: cover;
   transform: rotateY(180deg) translateZ(20px);
-  touch-action: none;
 }
 
 section .book img {
@@ -502,7 +501,6 @@ section .book img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  touch-action: none;
 }
 
 
