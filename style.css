@@ -59,6 +59,7 @@ main {
   z-index: 100;
   position: sticky;
   top: 0;
+  white-space: nowrap;
 }
 
 .subCategories {
@@ -442,7 +443,6 @@ input:hover {
 
 
 
-
 section {
   margin: 20px;
   display: flex;
@@ -450,6 +450,7 @@ section {
   align-items: center;
   transform-style: preserve-3d;
   perspective: 1000px;
+  touch-action: none;
 }
 
 section .book {
@@ -462,8 +463,8 @@ section .book {
 }
 
 section .book:hover {
-  transform: rotateY(35deg);
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  transform: rotateY(45deg);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
 }
 
 section .book:active {
@@ -476,7 +477,7 @@ section .book:before {
   width: 20px;
   height: 100%;
   transform-origin: left;
-  background: url(./book/img/side.jpg);
+  background: url(./book/img/side.png);
   background-position: center;
   background-size: cover;
   transform: rotateY(90deg);
@@ -561,7 +562,7 @@ section .book img {
 .sideMenu {
   height: 100%;
   background-color: #212121;
-  border-radius: 0 10px 0 0;
+  border-radius: 0 5px 0 0;
 }
 
 /* Common styles for categories and buttons */
