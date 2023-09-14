@@ -513,18 +513,24 @@ input:hover {
   object-fit: cover;
 }
 
-/* .back {
+.back {
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
   position: absolute;
+  background-color: #00DDEB;
   color: #f7f7f7;
   opacity: 1;
   transition: 1s;
-  transform: rotateY(180deg) translateZ(20px);
+  transform: rotateY(180deg) translateZ(80px);
 }
 
 .buy-book {
   background-color: transparent;
   border: 2px solid #f7f7f7;
   position: absolute;
+
   bottom: 0;
   width: 100px;
   height: 60px;
@@ -532,7 +538,7 @@ input:hover {
 
 .flip:focus .back {
   opacity: 1;
-} */
+}
 
 
 
