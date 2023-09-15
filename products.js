@@ -1,7 +1,7 @@
 var products = [];
 
 // Make an HTTP request to the server
-fetch('http://192.168.0.40:3000/') // Update the URL to match your server's URL
+fetch('http://141.145.217.173:3000/') // Update the URL to match your server's URL
     .then((response) => response.json())
     .then((data) => {
         // Update the productsArray with the retrieved data
