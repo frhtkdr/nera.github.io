@@ -1,7 +1,7 @@
 var products = [];
 
 // Make an HTTP request to the server
-fetch('https://hello-back-end-de73af5d1d43.herokuapp.com/') // Update the URL to match your server's URL
+fetch('https://hello-back-end-de73af5d1d43.herokuapp.com/books') // Update the URL to match your server's URL
     .then((response) => response.json())
     .then((data) => {
         // Update the productsArray with the retrieved data
